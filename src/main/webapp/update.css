@@ -1,0 +1,97 @@
+* {
+    background-color: #f8f9fa;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+select:focus-visible {
+    outline: none;
+}
+
+main {
+    width: 768px;
+    margin: 8rem auto;
+    font-family: 'Google Sans KR', sans-serif;
+}
+
+.int-area,
+.gender-area,
+.secession{
+    display: flex;
+    padding: 16px 0;
+}
+
+.title {
+    width: 152px;
+    flex-shrink: 0;
+}
+
+.int-area input {
+    width: 300px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+    outline: none;
+}
+
+.gender-area select {
+    width: 300px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+option:nth-child(1) {
+    display: none;
+}
+
+.secession button {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    background: #ff6b6b;
+    color: white;
+    padding: 0 20px;
+    height: 2rem;
+    font-size: 16px;
+}
+
+.btn-area {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.btn-area .reset{
+    cursor: pointer;
+    width: 64px;
+    height: 36px;
+    background: #f8f9fa;
+    color: black;
+    margin: 6px 0;
+    padding: 0 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-area .submit{
+    cursor: pointer;
+    width: 76px;
+    height: 36px;
+    background: black;
+    color: white;
+    margin: 6px 0 6px 24px;
+    padding: 0 8px;
+    border: none;
+    border-radius: 4px;
+}
