@@ -6,7 +6,7 @@
     </span>
         <%
             String username = (String)session.getAttribute("username");
-//            boolean manager = (boolean)session.getAttribute("manager");
+            String manager = (String)session.getAttribute("manager");
             if(username == null){
          %>
          <button class="btn" onclick="location.href='login.jsp'" >
@@ -26,15 +26,15 @@
              <div class="menuList">
                  <a href="update.jsp">내 정보</a>
                  <%
-//                    if (manager){
-<%--                 %>--%>
+                    if (manager.equals("true")){
+                 %>
                  <a href="select.jsp">회원 목록</a>
                  <%
-//                     }else {
+                     }else {
                  %>
-                 <a href="select.jsp">내 게시글</a
+                 <a href="">내 게시글</a>
                  <%
-//                     }
+                     }
                  %>
                  <a href="logout.jsp">로그아웃</a>
              </div>

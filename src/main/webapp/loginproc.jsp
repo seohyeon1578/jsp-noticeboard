@@ -15,10 +15,12 @@
 
         session.setAttribute("username",username);
         session.setAttribute("password",password);
+        session.setAttribute("manager","false");
 
         boolean managerck = memberdb.domanagerck(username);
         if(managerck){
-            session.setAttribute("manager",true);
+            session = request.getSession();
+            session.setAttribute("manager","true");
         }
         response.sendRedirect("index.jsp");
 
