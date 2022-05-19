@@ -4,11 +4,8 @@
     --font_1: normal normal normal 45px/1.4em adobe-caslon-w01-smbd,adobe-caslon-w08-smbd,serif;
 }
 
-* {
-    background-color: #f8f9fa;
-}
-
 header {
+    background-color: #f8f9fa;
     box-sizing: border-box;
     margin: 0;
     padding: 0;

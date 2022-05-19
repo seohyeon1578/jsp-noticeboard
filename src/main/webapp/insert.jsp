@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>JSP - SeoHyeon</title>
-    <link href="insert.css" rel="stylesheet"/>
+    <link href="css/insert.css" rel="stylesheet"/>
 </head>
 <body>
 <section class="insert-form">

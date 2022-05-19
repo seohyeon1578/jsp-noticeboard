@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>JSP - SeoHyeon</title>
-    <link href="update.css" rel="stylesheet">
+    <link href="css/update.css" rel="stylesheet">
 </head>
 <body>
 <%@include file="head.jsp"%>

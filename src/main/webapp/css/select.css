@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mukta KR', sans-serif;
+    font-size: 0.9rem;
+    height: 100vh;
+}
+
+section {
+    background: #f8f9fa;
+    width: 100%;
+    height:85%;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: left;
+    padding: 20px 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.select-table {
+    width: 1170px;
+    height: 695px;
+    padding: 0 10px;
+    background: white;
+    box-shadow: 0 5px 10px #e1e5ee;
+}
+
+table {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    overflow: hidden;
+}
+
+thead tr {
+    height: 60px;
+    border-bottom: 2px solid darkgray;
+}
+
+th,
+td {
+    padding: 8px 10px;
+    text-align: left;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: unset;
+    padding-bottom: 0;
+}
+
+input[type="checkbox"] {
+    display: none;
+
+}
+
+input[type="checkbox"] + label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+    border: 2px solid darkgray;
+    border-radius: 30%;
+
+}
+
+input[type="checkbox"]:checked + label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    border: none;
+    background-image: url("../img/chechedIcon.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+tbody tr {
+    font-size: 15px;
+    color: gray;
+    font-weight: unset;
+    border-bottom: 1px solid darkgray;
+}
+
+.listBtn {
+    position: fixed;
+    bottom: 11.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listBtn a {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #e6e6e6;
+    text-decoration: none;
+    margin: 0px 4px;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
+    color: #999999
+}
+
+.listBtn a:hover,
+.listBtn a:active{
+    background-color: #42454c;
+    color: #ffffff;
+    border: 1px solid #42454c;
+}
+
+.listBtn .prev {
+    width: 28px;
+    height: 28px;
+    background-image: url("../img/prev.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.listBtn .next {
+    width: 28px;
+    height: 28px;
+    background-image: url("../img/next.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.listBtn .prev:hover{
+    background-image: url("../img/prevwhite.svg");
+}
+
+.listBtn .next:hover{
+    background-image: url("../img/nextwhite.svg");
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    width: 95px;
+    height: 30px;
+    position: absolute;
+    right: 20%;
+    bottom: 6%;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+

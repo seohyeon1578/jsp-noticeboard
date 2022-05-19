@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<link href="head.css" rel="stylesheet">
+<link href="css/head.css" rel="stylesheet">
 <header>
     <span class="logoFont">
         <a href="index.jsp">SeoHyeon</a>
