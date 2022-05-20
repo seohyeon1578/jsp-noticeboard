@@ -16,6 +16,14 @@
             <input type="password" name="password" id="pw" autocomplete="off" required>
             <label for="pw">비밀번호</label>
         </div>
+        <%
+            String checked = (String) session.getAttribute("check");
+            if(checked == "false"){
+        %>
+        <div class="id_pwCheck">아이디 또는 비밀번호를 잘못 입력했습니다.</div>
+        <%
+            }
+        %>
         <div class="btn-area">
             <button type="submit">로그인</button>
         </div>

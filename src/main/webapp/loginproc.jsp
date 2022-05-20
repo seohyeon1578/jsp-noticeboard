@@ -25,11 +25,7 @@
         response.sendRedirect("index.jsp");
 
     }else{
-        out.println("실패");
-        out.println("<script>");
-        out.println("alert('아이디 비밀번호 확인하세요');");
-        out.println("location.href='index.jsp';");
-        out.println("</script>");
-
+        session.setAttribute("check", "false");
+        response.sendRedirect("login.jsp");
     }
 %>

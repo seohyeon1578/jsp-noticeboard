@@ -98,6 +98,30 @@ tbody tr {
     border-bottom: 1px solid darkgray;
 }
 
+.column1 {
+    width: 80px;
+}
+
+.column2 {
+    width: 130px;
+}
+
+.column3 {
+    width: 180px;
+}
+
+.column4 {
+    width: 360px;
+}
+
+.column5 {
+    width: 220px;
+}
+
+.column6 {
+    width: 180px;
+}
+
 .listBtn {
     position: fixed;
     bottom: 11.5%;

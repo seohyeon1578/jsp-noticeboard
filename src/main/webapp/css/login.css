@@ -89,6 +89,12 @@ label {
     color: #166caa;
 }
 
+.id_pwCheck {
+    color: red;
+    position: relative;
+    top: 10px
+}
+
 .btn-area {
     margin-top: 30px;
 }
@@ -96,7 +102,6 @@ label {
 .btn-area button {
     width: 100%;
     height: 50px;
-    margin: 0px 10px;
     color: #fff;
     background: rgb(45, 45, 45);
     border: none;

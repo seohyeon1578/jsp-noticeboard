@@ -72,6 +72,28 @@ select:focus-visible {
     color: #166caa;
 }
 
+#checkWarningId {
+    position: absolute;
+    top: 30%;
+    right: -4%;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/warning.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#checkWarningEmail {
+    position: absolute;
+    top: 30%;
+    right: -4%;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/warning.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .gender-area {
     width: 400px;
     position: relative;

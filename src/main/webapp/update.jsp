@@ -17,6 +17,7 @@
 
         int id = member.getId();
         String username1 = member.getUsername();
+        String email = member.getEmail();
         String password = member.getPassword();
         String gender = member.getGender();
     %>
@@ -28,6 +29,12 @@
                     <h3>이름</h3>
                 </div>
                 <input type="text" name="username" value="<%=username1%>"/>
+            </div>
+            <div class="int-area">
+                <div class="title">
+                    <h3>이메일</h3>
+                </div>
+                <input type="text" name="email" value="<%=email%>"/>
             </div>
             <div class="int-area">
                 <div class="title">

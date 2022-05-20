@@ -51,8 +51,9 @@
                         </th>
                         <th class="column2">번호</th>
                         <th class="column3">이름</th>
-                        <th class="column4">비번</th>
-                        <th class="column5">성별</th>
+                        <th class="column4">이메일</th>
+                        <th class="column5">비번</th>
+                        <th class="column6">성별</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,8 +68,9 @@
                         </td>
                         <td class="column2"> <%=member.getId()%> </td>
                         <td class="column3"> <%=member.getUsername()%> </td>
-                        <td class="column4"> <%=member.getPassword()%> </td>
-                        <td class="column5"> <%=member.getGender()%> </td>
+                        <td class="column4"> <%=member.getEmail()%> </td>
+                        <td class="column5"> <%=member.getPassword()%> </td>
+                        <td class="column6"> <%=member.getGender()%> </td>
                     </tr>
                 <%
                     }
