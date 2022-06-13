@@ -1,7 +1,7 @@
 :root {
-    --fnt: normal normal normal 20px/1.4em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
-    --font_0: normal normal normal 20px/1.4em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
-    --font_1: normal normal normal 45px/1.4em adobe-caslon-w01-smbd,adobe-caslon-w08-smbd,serif;
+    --fnt: normal normal normal 20px/1.4em avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light, sans-serif;
+    --font_0: normal normal normal 20px/1.4em avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light, sans-serif;
+    --font_1: normal normal normal 45px/1.4em adobe-caslon-w01-smbd, adobe-caslon-w08-smbd, serif;
 }
 
 header {

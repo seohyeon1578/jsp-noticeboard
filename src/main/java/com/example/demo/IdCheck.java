@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 public class IdCheck extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doHandle(request,response);
+        doHandle(request, response);
     }
 
     protected void doHandle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

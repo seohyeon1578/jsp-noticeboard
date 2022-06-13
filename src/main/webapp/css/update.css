@@ -20,7 +20,7 @@ main {
 
 .int-area,
 .gender-area,
-.secession{
+.secession {
     display: flex;
     padding: 16px 0;
 }
@@ -72,7 +72,7 @@ option:nth-child(1) {
     margin-top: 24px;
 }
 
-.btn-area .reset{
+.btn-area .reset {
     cursor: pointer;
     width: 64px;
     height: 36px;
@@ -84,7 +84,7 @@ option:nth-child(1) {
     border-radius: 4px;
 }
 
-.btn-area .submit{
+.btn-area .submit {
     cursor: pointer;
     width: 76px;
     height: 36px;

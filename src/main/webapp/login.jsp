@@ -10,7 +10,7 @@
     <form action="loginproc.jsp">
         <div class="int-area">
             <input type="text" name="username" id="id" autocomplete="off" required>
-            <label for="id">사용자 이름 또는 이메일</label>
+            <label for="id">사용자 이름</label>
         </div>
         <div class="int-area">
             <input type="password" name="password" id="pw" autocomplete="off" required>
@@ -18,7 +18,7 @@
         </div>
         <%
             String checked = (String) session.getAttribute("check");
-            if(checked == "false"){
+            if (checked == "false") {
         %>
         <div class="id_pwCheck">아이디 또는 비밀번호를 잘못 입력했습니다.</div>
         <%
@@ -29,7 +29,7 @@
         </div>
     </form>
     <div class="caption">
-        <a href="">비밀번호를 잊으셨나요?</a>
+        <a href="findPw.jsp">비밀번호를 잊으셨나요?</a>
         <a href="insert.jsp">회원가입</a>
     </div>
 </section>

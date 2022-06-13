@@ -7,7 +7,7 @@
     String password = request.getParameter("password");
     String gender = request.getParameter("gender");
     MemberDB md = new MemberDB();
-    md.doupdate(username, email, password,gender,id);
-    session.setAttribute("username",username);
+    md.doupdate(username, email, password, gender, id);
+    session.setAttribute("username", username);
     response.sendRedirect("update.jsp");
 %>

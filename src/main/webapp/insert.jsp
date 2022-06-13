@@ -48,9 +48,9 @@
         label.style.cssText = "top: -2px; font-size: 13px; color: #166caa;"
     }
     selectElement.onblur = () => {
-        if(selectElement.options[document.querySelector("select").selectedIndex].value !== ''){
+        if (selectElement.options[document.querySelector("select").selectedIndex].value !== '') {
             label.style.cssText = "top: -2px; font-size: 13px; color: #166caa;"
-        }else {
+        } else {
             label.style.cssText = "top: 15px; font-size: 18px; color: #000000;"
         }
 
@@ -65,20 +65,20 @@
         let userId = $('.id').val();
 
         $.ajax({
-            url : "IdCheck",
-            type : "post",
-            data : {userId: userId},
-            dataType : 'json',
-            success : function (result) {
+            url: "IdCheck",
+            type: "post",
+            data: {userId: userId},
+            dataType: 'json',
+            success: function (result) {
                 if (result == 0) {
-                    $('#checkWarningId').attr('style','display:flex');
-                    $('button').attr('style','pointer-events: none');
+                    $('#checkWarningId').attr('style', 'display:flex');
+                    $('button').attr('style', 'pointer-events: none');
                 } else {
-                    $('#checkWarningId').attr('style','display:none');
-                    $('button').attr('style','pointer-events: auto');
+                    $('#checkWarningId').attr('style', 'display:none');
+                    $('button').attr('style', 'pointer-events: auto');
                 }
             },
-            error : function() {
+            error: function () {
                 alert("서버요청실패");
             }
         })
@@ -87,20 +87,20 @@
         let userEmail = $('.email').val();
 
         $.ajax({
-            url : "EmailCheck",
-            type : "post",
-            data : {userEmail: userEmail},
-            dataType : 'json',
-            success : function (result) {
+            url: "EmailCheck",
+            type: "post",
+            data: {userEmail: userEmail},
+            dataType: 'json',
+            success: function (result) {
                 if (result == 0) {
-                    $('#checkWarningEmail').attr('style','display:flex');
-                    $('button').attr('style','pointer-events: none');
+                    $('#checkWarningEmail').attr('style', 'display:flex');
+                    $('button').attr('style', 'pointer-events: none');
                 } else {
-                    $('#checkWarningEmail').attr('style','display:none');
-                    $('button').attr('style','pointer-events: auto');
+                    $('#checkWarningEmail').attr('style', 'display:none');
+                    $('button').attr('style', 'pointer-events: auto');
                 }
             },
-            error : function() {
+            error: function () {
                 alert("서버요청실패");
             }
         })

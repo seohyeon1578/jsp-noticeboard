@@ -242,4 +242,26 @@ public class MemberDB {
 
         return emailCheck;
     }
+
+    public String dofindPw(String username, String email) {
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        String result = null;
+        try {
+            con = getConnection();
+            pstmt = con.prepareStatement("select password from member where username = ? and email = ?");
+            pstmt.setString(1, username);
+            pstmt.setString(2, email);
+            rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                result = rs.getString("password");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }

@@ -7,12 +7,12 @@
     String password = request.getParameter("password");
     String gender = request.getParameter("gender");
 
-    if(gender == ""){
+    if (gender == "") {
         gender = "선택 안함";
     }
 
     MemberDB md = new MemberDB();
 
-    md.doinsert(username, email, password,gender);
+    md.doinsert(username, email, password, gender);
     response.sendRedirect("login.jsp");
 %>

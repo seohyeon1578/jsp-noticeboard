@@ -7,7 +7,7 @@
     <link href="css/update.css" rel="stylesheet">
 </head>
 <body>
-<%@include file="head.jsp"%>
+<%@include file="head.jsp" %>
 <main>
     <%
         MemberDB md = new MemberDB();
@@ -23,7 +23,7 @@
     %>
     <section class="update-form">
         <form action="updateproc.jsp">
-            <input type="hidden" name="id" value="<%=id%>" />
+            <input type="hidden" name="id" value="<%=id%>"/>
             <div class="int-area">
                 <div class="title">
                     <h3>이름</h3>
@@ -47,7 +47,8 @@
                     <h3>성별</h3>
                 </div>
                 <select id="gender" name="gender">
-                    <option selected><%=gender%></option>
+                    <option selected><%=gender%>
+                    </option>
                     <option value="남성">남성</option>
                     <option value="여성">여성</option>
                     <option value="선택 안함">선택 안함</option>
