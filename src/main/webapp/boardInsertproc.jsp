@@ -13,7 +13,6 @@
     boolean success = bm.doinsert(board);
     if(success){
         out.println("<script>");
-        out.println("alert('글저장하였습니다.');");
         out.println("window.location.href='index.jsp';");
         out.println("</script>");
     }
