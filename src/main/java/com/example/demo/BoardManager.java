@@ -9,7 +9,7 @@ public class BoardManager {
     getConnection gc = new getConnection();
 
     public List<Board> doselect(int pageNum) throws Exception {
-        int start = ( pageNum -1 )* 5;
+        int start = ( pageNum -1 )* 21;
 
         List<Board> list = new ArrayList<>();
 
@@ -18,7 +18,7 @@ public class BoardManager {
         ResultSet rs = null;
         try{
             con = gc.getConnection();
-            pstmt = con.prepareStatement("select * from board order by idx desc");
+            pstmt = con.prepareStatement("select * from board order by idx desc limit "+start+",21");
             rs = pstmt.executeQuery();
             while(rs.next()){
                 Board board = new Board();
@@ -48,7 +48,7 @@ public class BoardManager {
         try{
             con = gc.getConnection();
             pstmt = con.prepareStatement("select " +
-                    "ceil(count(idx)/5) as cnt " +
+                    "ceil(count(idx)/21) as cnt " +
                     "from board");
             rs = pstmt.executeQuery();
             if(rs.next())
@@ -63,7 +63,7 @@ public class BoardManager {
         return 1;
     }
 
-    public boolean doinsert(Board board){
+    public boolean doinsert(Board board) throws Exception {
         Connection con = null;
         PreparedStatement pstmt = null;
         try{
@@ -79,8 +79,55 @@ public class BoardManager {
             pstmt.executeUpdate();
         }catch (Exception e){
             e.printStackTrace();
+        }finally {
+            gc.close(con,pstmt);
         }
         return true;
+    }
+
+    public Board doselectrow(int idx) throws Exception{
+        Board board = new Board();
+
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try{
+            con = gc.getConnection();
+            pstmt = con.prepareStatement("select * from board where idx=?");
+            pstmt.setInt(1, idx);
+            // select -> executeQuery
+            // insert update delete executeUpdate();
+            rs = pstmt.executeQuery();
+            if(rs.next()){
+                board.setIdx(rs.getInt("idx"));
+                board.setName(rs.getString("name"));
+                board.setTitle(rs.getString("title"));
+                board.setContent(rs.getString("content"));
+                board.setWDate(rs.getString("wdate"));
+                board.setCount(rs.getInt("count"));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            gc.close(con,pstmt,rs);
+        }
+
+        return board;
+    }
+
+    public void dodelete(int idx) throws Exception{
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        try{
+            con = gc.getConnection();
+            pstmt = con.prepareStatement("delete from board where idx =?");
+            pstmt.setInt(1, idx);
+            pstmt.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            gc.close(con,pstmt);
+        }
     }
 }
 

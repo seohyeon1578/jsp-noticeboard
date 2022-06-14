@@ -29,7 +29,7 @@
         <% for(Board board : list) { %>
         <tr>
           <td class="column1"><%=board.getIdx()%></td>
-          <td class="column2 title1"><a href="#"><%=board.getTitle()%></a></td>
+          <td class="column2 title1"><a href="view.jsp"><%=board.getTitle()%></a></td>
           <td class="column3"><%=board.getName()%></td>
           <td class="column4"><%=board.getWDate()%></td>
           <td class="column5"><%=board.getCount()%></td>
@@ -45,7 +45,7 @@
     <% for(int i=1;i<pagecnt+1; i++) {%>
     <a href="?pageNum=<%=i%>"><%=i%></a>
     <% } %>
-    <% if( Integer.parseInt(pageNum) > 1) {%>
+    <% if( pagecnt > 1 && Integer.parseInt(pageNum) < pagecnt) {%>
     <a class="next" href="?pageNum=<%=Integer.parseInt(pageNum)+1%>"></a>
     <% } %>
   </div>
