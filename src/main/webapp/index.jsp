@@ -1,5 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="com.example.demo.MemberDB" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +7,7 @@
 </head>
 <body>
 <%@include file="head.jsp" %>
+<%@include file="board.jsp"%>
 
 </body>
 </html>

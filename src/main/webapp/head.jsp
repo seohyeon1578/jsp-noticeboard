@@ -42,7 +42,7 @@
                     <%
                     } else {
                     %>
-                    <a href="">내 게시글</a>
+                    <a href="myBoard.jsp">내 게시글</a>
                     <%
                         }
                     %>

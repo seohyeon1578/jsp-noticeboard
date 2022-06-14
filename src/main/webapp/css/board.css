@@ -1,0 +1,143 @@
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.board-table {
+    width: 1170px;
+    height: 695px;
+    padding: 0 10px;
+    background-color: white;
+    box-shadow: 0 5px 10px #e1e5ee;
+}
+
+.table {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 12px;
+    background-color: white !important;
+    border-bottom: 1px solid #42454c;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th, td{
+    background-color: white !important;
+    text-align: center;
+}
+
+thead {
+    height: 40px;
+}
+
+thead tr th {
+    border-style: solid;
+    border-width: 2px 0 1px;
+    border-color: #42454c;
+}
+
+th.column1 {
+    width: 5%;
+}
+
+th.column2 {
+    width:60%;
+}
+
+th.column3 {
+    width: 15%;
+}
+
+th.column4 {
+    width: 15%;
+}
+
+th.column5 {
+    width: 5%;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e6e6e6;
+    height: 28px;
+}
+
+tbody tr:last-child{
+    border-bottom: 1px solid #42454c;
+}
+
+td {
+    font-size: 13px;
+}
+
+.title1 {
+    text-align: left;
+}
+
+.title1 a:hover {
+    text-decoration: underline;
+}
+
+.listBtn {
+    background-color: #fff !important;
+    position: fixed;
+    bottom: 11.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listBtn a{
+    background-color: #fff;
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #e6e6e6;
+    text-decoration: none;
+    margin: 0px 4px;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
+    color: #999999
+}
+
+.listBtn a:hover,
+.listBtn a:active {
+    background-color: #42454c;
+    color: #ffffff;
+    border: 1px solid #42454c;
+}
+
+.listBtn .prev {
+    width: 28px;
+    height: 28px;
+    background-image: url("../img/prev.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.listBtn .next {
+    width: 28px;
+    height: 28px;
+    background-image: url("../img/next.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.listBtn .prev:hover {
+    background-image: url("../img/prevwhite.svg");
+}
+
+.listBtn .next:hover {
+    background-image: url("../img/nextwhite.svg");
+}
+
