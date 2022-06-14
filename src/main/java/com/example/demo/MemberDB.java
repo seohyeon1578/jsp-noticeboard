@@ -9,12 +9,13 @@ import java.util.List;
 
 public class MemberDB {
 
-    public Connection getConnection() throws Exception {
+    /*public Connection getConnection() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");  // mysql.jar 라이브러리 확인
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/b2-1",
                 "root", "1111");
         return con;
-    }
+    }*/
+    getConnection gc = new getConnection();
 
     public List<Member> doselect() {
         List<Member> list = new ArrayList();
@@ -22,7 +23,7 @@ public class MemberDB {
         PreparedStatement pstmt = null; // SQL문 작성..
         ResultSet rs = null;  // DB Table 저장..
         try {
-            con = getConnection();
+            con = gc.getConnection();
             pstmt = con.prepareStatement("select id, username, email, password, gender from member");
             rs = pstmt.executeQuery();
             while (rs.next()) {
@@ -50,7 +51,7 @@ public class MemberDB {
 
         Member member = new Member();
         try {
-            con = getConnection();
+            con = gc.getConnection();
             // sql 구문 준비
             pstmt = con.prepareStatement("select id, username, email, password, gender from member where username = ?");
             pstmt.setString(1, username);
@@ -87,7 +88,7 @@ public class MemberDB {
 
         System.out.println("values = " + values);
         try {
-            con = getConnection();
+            con = gc.getConnection();
             // sql 구문 준비
             pstmt = con.prepareStatement("delete from member where id in (" + values + ")");
             pstmt.executeUpdate();// sql 구문 실행...
@@ -101,7 +102,7 @@ public class MemberDB {
         PreparedStatement pstmt = null;
         System.out.println("values = " + id);
         try {
-            con = getConnection();
+            con = gc.getConnection();
             // sql 구문 준비
             pstmt = con.prepareStatement("delete from member where id in (" + id + ")");
             pstmt.executeUpdate();// sql 구문 실행...
@@ -114,7 +115,7 @@ public class MemberDB {
         Connection con = null;
         PreparedStatement pstmt = null;
         try {
-            con = getConnection();
+            con = gc.getConnection();
             pstmt = con.prepareStatement("insert into member" +
                     "(username, email, password,gender) " +
                     "values (?,?,?,?)");
@@ -132,7 +133,7 @@ public class MemberDB {
         Connection con = null;
         PreparedStatement pstmt = null;
         try {
-            con = getConnection();
+            con = gc.getConnection();
             pstmt = con.prepareStatement("update member set username=?, " +
                     "email=?, " +
                     "password=?, " +
@@ -154,7 +155,7 @@ public class MemberDB {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try {
-            con = getConnection();
+            con = gc.getConnection();
             pstmt = con.prepareStatement("select * from member where username = ? and password =?");
             pstmt.setString(1, u);
             pstmt.setString(2, p);
@@ -174,7 +175,7 @@ public class MemberDB {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try {
-            con = getConnection();
+            con = gc.getConnection();
             pstmt = con.prepareStatement("select manager from member where username = ?");
             pstmt.setString(1, username);
             rs = pstmt.executeQuery();
@@ -199,7 +200,7 @@ public class MemberDB {
         int idCheck = 0;
 
         try {
-            con = getConnection();
+            con = gc.getConnection();
             pstmt = con.prepareStatement("select username from member where username = ?");
             pstmt.setString(1, username);
             rs = pstmt.executeQuery();
@@ -225,7 +226,7 @@ public class MemberDB {
         int emailCheck = 0;
 
         try {
-            con = getConnection();
+            con = gc.getConnection();
             pstmt = con.prepareStatement("select email from member where email = ?");
             pstmt.setString(1, email);
             rs = pstmt.executeQuery();
@@ -250,7 +251,7 @@ public class MemberDB {
 
         String result = null;
         try {
-            con = getConnection();
+            con = gc.getConnection();
             pstmt = con.prepareStatement("select password from member where username = ? and email = ?");
             pstmt.setString(1, username);
             pstmt.setString(2, email);
