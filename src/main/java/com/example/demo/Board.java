@@ -10,6 +10,7 @@ public class Board {
     private int count;
     private String phone;
     private String email;
+    private String pass;
 
     public Board() {}
 
@@ -24,10 +25,11 @@ public class Board {
                 ", count=" + count +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
+                ", pass='" + pass + '\'' +
                 '}';
     }
 
-    public Board(int idx, String title, String content, String name, String WDate, int count, String phone, String email) {
+    public Board(int idx, String title, String content, String name, String WDate, int count, String phone, String email, String pass) {
         this.idx = idx;
         this.title = title;
         this.content = content;
@@ -36,6 +38,7 @@ public class Board {
         this.count = count;
         this.phone = phone;
         this.email = email;
+        this.pass = pass;
     }
 
     public int getIdx() {
@@ -98,6 +101,14 @@ public class Board {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
 }

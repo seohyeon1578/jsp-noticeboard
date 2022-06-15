@@ -53,6 +53,35 @@
     <button type="button" onclick="location.href='boardInsert.jsp'">글 쓰기</button>
   </div>
 </div>
+<form>
+  <fieldset>
+    <legend class="bind">글 검색</legend>
+    <div class="searchWrap">
+      <div class="selectBox">
+        <select name="searchType">
+          <option value="title">제목</option>
+          <option value="name">글쓴이</option>
+        </select>
+        <div class="select-area">
+          <span id="searchTypeText">제목</span>
+          <span class="inner">
+            <em class="listImg"></em>
+          </span>
+        </div>
+        <ul class="optionBox" style="display: none">
+          <li>제목</li>
+          <li>글쓴이</li>
+        </ul>
+      </div>
+      <div class="searchKeyword">
+        <div class="inner-search">
+          <input type="text" placeholder="검색어 입력" name="searchKeyword" value/>
+        </div>
+        <button type="submit"></button>
+      </div>
+    </div>
+  </fieldset>
+</form>
 
 <script type="text/javascript">
   window.onload = function (){

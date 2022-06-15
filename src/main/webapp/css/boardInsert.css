@@ -13,7 +13,7 @@ textarea {
 
 .center{
     position: absolute;
-    top: 20%;
+    top: 18%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -34,6 +34,16 @@ textarea {
     margin-top: 15px;
 }
 
+.s {
+    width: 230px;
+}
+
+.r {
+    position: absolute;
+    left: 24%;
+    top: 1.6%;
+}
+
 .area input {
     cursor: text;
     background-color: transparent;
@@ -47,12 +57,18 @@ textarea {
     height: 35px;
 }
 
+.area .insert-pass {
+    width: 230px;
+    height: 35px;
+}
+
 .area .insert-title {
     width: 700px;
     height: 35px;
 }
 
 .area label {
+    cursor: text;
     position: absolute;
     left: 10px;
     top: 9px;

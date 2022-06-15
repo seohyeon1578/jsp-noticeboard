@@ -10,10 +10,14 @@
 <div class="center">
     <div class="container">
         <form action="boardInsertproc.jsp">
-            <div class="row">
-                <div class="area">
+            <div>
+                <div class="area s">
                     <input class="insert-name" type="text" id="name" name="name" autocomplete="off" onclick="labelNone('name')" required>
                     <label for="name" id="nameLabel">닉네임</label>
+                </div>
+                <div class="area s r">
+                    <input class="insert-pass" type="text" id="pass" name="pass" autocomplete="off" onclick="labelNone('pass')" required>
+                    <label for="pass" id="passLabel">비밀번호</label>
                 </div>
                 <div class="area">
                     <input class="insert-title" type="text" id="title" name="title" autocomplete="off" onclick="labelNone('title')" required>
@@ -33,6 +37,8 @@
         let label = null;
         if(id == 'name'){
             label = document.getElementById("nameLabel");
+        }else if(id == 'pass'){
+            label = document.getElementById('passLabel');
         }else if(id == 'title'){
             label = document.getElementById('titleLabel');
         }

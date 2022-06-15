@@ -96,7 +96,7 @@ td a {
 
 .listBtn {
     background-color: #fff !important;
-    position: fixed;
+    position: absolute;
     bottom: 11.5%;
     left: 50%;
     transform: translateX(-50%);
@@ -150,3 +150,152 @@ td a {
     background-image: url("../img/nextwhite.svg");
 }
 
+.btn-area {
+    position: absolute;
+    bottom: 11.5%;
+    right: 19%;
+    margin-top: 5px;
+}
+
+.btn-area button {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    margin: 0px 8px;
+    color: #fff;
+    background: rgb(45, 45, 45);
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+fieldset {
+    border: none;
+}
+
+.bind {
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    margin: -1px;
+    width: 0px;
+    height: 0px;
+    top: -9999px;
+    font-size: 0;
+}
+
+.searchWrap {
+    position: relative;
+    width: 451px;
+    margin: 20px auto 0;
+}
+
+.selectBox {
+    width: 123px;
+    height: 36px;
+    border: 1px solid #42454c;
+    background-color: #42454c;
+}
+
+.selectBox select {
+    display: none;
+}
+
+.select-area {
+    position: relative;
+    display: block;
+    width: 109px;
+    height: 30px;
+    padding-left: 8px;
+    line-height: 30px;
+    margin: 3px 0 0 3px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #42454c;
+}
+
+.select-area .inner {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 34px;
+    height: 30px;
+    background-color: #42454c;
+}
+
+.listImg {
+    display: inline-block;
+    position: static;
+    width: 15px;
+    height: 9px;
+    margin: 10px 0 0 10px;
+    background-color: #42454c;
+    background-image: url("../img/listdown.svg");
+    background-repeat: no-repeat;
+}
+
+.optionBox {
+    position: absolute;
+    width: 103px;
+    box-sizing: content-box;
+    padding: 6px 9px 5px;
+    list-style: none;
+    line-height: 21px;
+    font-size: 14px;
+    border: 2px solid #42454c;
+    background-color: #fff !important;
+    color: #42454c;
+    z-index: 20;
+}
+
+.optionBox li {
+    line-height: 21px;
+    font-size: 14px;
+    color: #42454c;
+    font-weight: normal;
+    background-color: #fff !important;
+}
+
+.searchKeyword {
+    position: absolute;
+    right: 8%;
+    top: 0;
+    height: 36px;
+    margin-left: 5px;
+    border: 1px solid #42454c;
+    background: #42454c;
+}
+
+.searchKeyword .inner-search {
+    margin: 3px 0 0 3px;
+    width: 278px;
+    background: #fff !important;
+}
+
+.searchKeyword .inner-search input {
+    width: 260px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 9px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.searchKeyword button {
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 37px;
+    height: 36px;
+    background-color: #000000;
+    background-image: url("../img/searchImg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}

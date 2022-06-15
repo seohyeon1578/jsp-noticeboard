@@ -34,8 +34,8 @@
             </div>
         </div>
         <div class="btn-area">
-            <button type="button" onclick="location.href='boardUpdate.jsp'">수정</button>
-            <button type="button" onclick="location.href='boardDelete.jsp?idx=<%= board.getIdx()%>'">삭제</button>
+            <button type="button" onclick="location.href='boardUpdatePassCheck.jsp?idx=<%=board.getIdx()%>'">수정</button>
+            <button type="button" onclick="location.href='boardPasscheck.jsp?idx=<%=board.getIdx()%>'">삭제</button>
         </div>
     </div>
 </div>

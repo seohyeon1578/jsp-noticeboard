@@ -30,6 +30,7 @@ public class BoardManager {
                 board.setTitle(rs.getString("title"));
                 board.setWDate(rs.getString("wdate"));
                 board.setPhone(rs.getString("phone"));
+                board.setPass(rs.getString("password"));
                 list.add(board);
             }
             return list;
@@ -69,13 +70,14 @@ public class BoardManager {
         try{
             con = gc.getConnection();
             pstmt = con.prepareStatement("insert into board " +
-                    "(name,title,content,wdate)" +
+                    "(name,title,content,wdate,password)" +
                     " values " +
-                    "(?,?,?,?)");
+                    "(?,?,?,?,?)");
             pstmt.setString(1, board.getName());
             pstmt.setString(2, board.getTitle());
             pstmt.setString(3, board.getContent());
             pstmt.setString(4, LocalDateTime.now().toString());
+            pstmt.setString(5, board.getPass());
             pstmt.executeUpdate();
         }catch (Exception e){
             e.printStackTrace();
@@ -134,6 +136,7 @@ public class BoardManager {
     public void dodelete(int idx) throws Exception{
         Connection con = null;
         PreparedStatement pstmt = null;
+
         try{
             con = gc.getConnection();
             pstmt = con.prepareStatement("delete from board where idx =?");
@@ -144,6 +147,46 @@ public class BoardManager {
         }finally {
             gc.close(con,pstmt);
         }
+    }
+
+    public void doupdate(int idx, String name, String title, String content) throws Exception {
+        Connection con = null;
+        PreparedStatement pstmt = null;
+
+        try{
+            con = gc.getConnection();
+            pstmt = con.prepareStatement("update board set name = ?, title = ?, content = ? where idx = ?");
+            pstmt.setString(1,name);
+            pstmt.setString(2,title);
+            pstmt.setString(3,content);
+            pstmt.setInt(4, idx);
+            pstmt.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            gc.close(con,pstmt);
+        }
+    }
+
+    public String dopassCkeck(int idx) throws Exception {
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        try{
+            con = gc.getConnection();
+            pstmt = con.prepareStatement("select password from board where idx = ?");
+            pstmt.setInt(1,idx);
+
+            rs = pstmt.executeQuery();
+            if(rs.next())
+                return rs.getString("password");
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            gc.close(con,pstmt);
+        }
+        return "";
     }
 }
 
