@@ -5,5 +5,5 @@
     String idx = request.getParameter("idx");
     BoardManager bm = new BoardManager();
     bm.dodelete(Integer.parseInt(idx));
-    response.sendRedirect("board.jsp");
+    response.sendRedirect("index.jsp");
 %>
