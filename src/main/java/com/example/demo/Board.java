@@ -11,6 +11,7 @@ public class Board {
     private String phone;
     private String email;
     private String pass;
+    private String username;
 
     public Board() {}
 
@@ -26,10 +27,11 @@ public class Board {
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
                 ", pass='" + pass + '\'' +
+                ", username='" + username + '\'' +
                 '}';
     }
 
-    public Board(int idx, String title, String content, String name, String WDate, int count, String phone, String email, String pass) {
+    public Board(int idx, String title, String content, String name, String WDate, int count, String phone, String email, String pass, String username) {
         this.idx = idx;
         this.title = title;
         this.content = content;
@@ -39,6 +41,7 @@ public class Board {
         this.phone = phone;
         this.email = email;
         this.pass = pass;
+        this.username = username;
     }
 
     public int getIdx() {
@@ -109,6 +112,14 @@ public class Board {
 
     public void setPass(String pass) {
         this.pass = pass;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
 }

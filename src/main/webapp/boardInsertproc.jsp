@@ -6,11 +6,14 @@
     String pass = request.getParameter("pass");
     String name = request.getParameter("name");
     String content = request.getParameter("content");
+    String username = (String) session.getAttribute("username");
+    System.out.println(username);
     Board board = new Board();
     board.setTitle(title);
     board.setPass(pass);
     board.setContent(content);
     board.setName(name);
+    board.setUsername(username);
     BoardManager bm = new BoardManager();
     boolean success = bm.doinsert(board);
     if(success){

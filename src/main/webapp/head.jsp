@@ -40,7 +40,11 @@
                     %>
                     <a href="select.jsp">회원 목록</a>
                     <%
-                    }
+                    } else {
+                    %>
+                    <a href="myBoard.jsp">내 게시글</a>
+                    <%
+                        }
                     %>
                     <a href="logout.jsp">로그아웃</a>
                 </div>
