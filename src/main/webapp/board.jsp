@@ -29,7 +29,7 @@
         <% for(Board board : list) { %>
         <tr>
           <td class="column1"><%=board.getIdx()%></td>
-          <td class="column2 title1"><a href="view.jsp"><%=board.getTitle()%></a></td>
+          <td class="column2 title1"><a href="view.jsp?idx=<%=board.getIdx()%>"><%=board.getTitle()%></a></td>
           <td class="column3"><%=board.getName()%></td>
           <td class="column4"><%=board.getWDate()%></td>
           <td class="column5"><%=board.getCount()%></td>
@@ -43,10 +43,30 @@
     <a class="prev" href="?pageNum=<%=Integer.parseInt(pageNum)-1%>"></a>
     <% } %>
     <% for(int i=1;i<pagecnt+1; i++) {%>
-    <a href="?pageNum=<%=i%>"><%=i%></a>
+    <a href="?pageNum=<%=i%>" id="page"><%=i%></a>
     <% } %>
     <% if( pagecnt > 1 && Integer.parseInt(pageNum) < pagecnt) {%>
     <a class="next" href="?pageNum=<%=Integer.parseInt(pageNum)+1%>"></a>
     <% } %>
   </div>
+  <div class="btn-area">
+    <button type="button" onclick="location.href='boardInsert.jsp'">글 쓰기</button>
+  </div>
 </div>
+
+<script type="text/javascript">
+  window.onload = function (){
+    const pages = document.querySelectorAll('#page');
+    let url = document.location.href.split('=')[1];
+    if(url == null){
+      url = 1;
+    }
+
+    pages.forEach((page) => {
+
+      if (page.href.split('=')[1] == url) {
+        page.style.cssText = " background-color: #42454c; color: #ffffff; border: 1px solid #42454c;"
+      }
+    })
+  }
+</script>

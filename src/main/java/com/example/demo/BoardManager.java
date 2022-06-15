@@ -115,6 +115,22 @@ public class BoardManager {
         return board;
     }
 
+    public void docount(int idx) throws Exception {
+        Connection con = null;
+        PreparedStatement pstmt = null;
+
+        try{
+            con = gc.getConnection();
+            pstmt = con.prepareStatement("update board set count = count + 1 where idx = ?");
+            pstmt.setInt(1, idx);
+            pstmt.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            gc.close(con,pstmt);
+        }
+    }
+
     public void dodelete(int idx) throws Exception{
         Connection con = null;
         PreparedStatement pstmt = null;

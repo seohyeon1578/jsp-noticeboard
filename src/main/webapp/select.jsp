@@ -105,8 +105,7 @@
                 <%
                     for (int i = startPage; i <= endPage; i++) {
                 %>
-                <a href="select.jsp?pageNum=<%=i %>" id="page"><%=i %>
-                </a>
+                <a href="select.jsp?pageNum=<%=i %>" id="page"><%=i %></a>
                 <%} %>
                 <%
                     if (endPage < pageCount) {
