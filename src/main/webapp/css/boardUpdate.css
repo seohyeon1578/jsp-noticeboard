@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+textarea {
+    width: 1031px;
+    height: 486px;
+    resize: none;
+    margin-top: 15px;
+}
+
+.center{
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1050px;
+    height: 680px;
+    background-color: white !important;
+    box-shadow: 0 5px 10px #e1e5ee;
+}
+
+.area {
+    width: 400px;
+    position: relative;
+    margin-top: 15px;
+}
+
+.area input {
+    cursor: text;
+    background-color: transparent;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid #cecdce;
+}
+
+.area span {
+    font-size: 18px;
+}
+
+.area .span-title {
+    position: absolute;
+    white-space: nowrap;
+    bottom: 15%;
+    right: -40px;
+}
+
+.area-title {
+    width: 706px;
+}
+
+.area .insert-name {
+    width: 236px;
+    height: 39px;
+}
+
+.area .insert-title {
+    width: 706px;
+    height: 39px;
+}
+
+.btn-area {
+    display: inherit;
+    text-align: right;
+    margin-top: 8px;
+}
+
+.btn-area button {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    margin: 0px 10px;
+    color: #fff;
+    background: rgb(45, 45, 45);
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button[type="reset"]{
+    color: rgb(45, 45, 45);
+    background: #fff;
+    border: 1px solid #2d2d2d;
+}
