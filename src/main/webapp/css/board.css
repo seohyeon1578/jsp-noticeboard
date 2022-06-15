@@ -4,6 +4,10 @@ a{
     color: black;
 }
 
+#searchTypeText {
+    background-color: #fff;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -155,6 +159,7 @@ td a {
     bottom: 11.5%;
     right: 19%;
     margin-top: 5px;
+    background-color: #fff !important;
 }
 
 .btn-area button {
@@ -170,8 +175,17 @@ td a {
     cursor: pointer;
 }
 
+.searchForm {
+    position: fixed;
+    top: 88%;
+    right: 50%;
+    transform: translateX(55%);
+    background: none;
+}
+
 fieldset {
     border: none;
+    background: none;
 }
 
 .bind {
@@ -251,11 +265,16 @@ fieldset {
 }
 
 .optionBox li {
+    cursor: pointer;
     line-height: 21px;
     font-size: 14px;
     color: #42454c;
     font-weight: normal;
     background-color: #fff !important;
+}
+
+.optionBox li:hover {
+    text-decoration: underline;
 }
 
 .searchKeyword {

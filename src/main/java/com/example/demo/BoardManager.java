@@ -42,6 +42,45 @@ public class BoardManager {
         return list;
     }
 
+    public List<Board> doselect(int pageNum, String searchType, String searchKeyword) throws Exception {
+        int start = ( pageNum -1 )* 21;
+
+        List<Board> list = new ArrayList<>();
+
+        String sql = "select * from board where " + searchType + " like ? order by idx desc limit "+start+",21";
+
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        try{
+            con = gc.getConnection();
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1,"%" + searchKeyword + "%");
+
+            rs = pstmt.executeQuery();
+            while(rs.next()){
+                Board board = new Board();
+                board.setIdx(rs.getInt("idx"));
+                board.setContent(rs.getString("content"));
+                board.setCount(rs.getInt("count"));
+                board.setEmail(rs.getString("email"));
+                board.setName(rs.getString("name"));
+                board.setTitle(rs.getString("title"));
+                board.setWDate(rs.getString("wdate"));
+                board.setPhone(rs.getString("phone"));
+                board.setPass(rs.getString("password"));
+                list.add(board);
+            }
+            return list;
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            gc.close(con,pstmt,rs);
+        }
+        return list;
+    }
+
     public int getPageCnt() throws Exception {
         Connection con = null;
         PreparedStatement pstmt = null;
@@ -51,6 +90,32 @@ public class BoardManager {
             pstmt = con.prepareStatement("select " +
                     "ceil(count(idx)/21) as cnt " +
                     "from board");
+            rs = pstmt.executeQuery();
+            if(rs.next())
+                return rs.getInt("cnt");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
+            gc.close(con,pstmt,rs);
+        }
+        return 1;
+    }
+
+    public int getPageCnt( String searchType, String searchKeyword) throws Exception {
+        String sql = "select " +
+                "ceil(count(idx)/21) as cnt " +
+                "from board where " + searchType + " like ?";
+
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        try{
+            con = gc.getConnection();
+            pstmt = con.prepareStatement(sql);
+            pstmt.setString(1,"%" + searchKeyword + "%");
             rs = pstmt.executeQuery();
             if(rs.next())
                 return rs.getInt("cnt");
